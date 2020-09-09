@@ -1,0 +1,11 @@
+{
+	"media query": {
+		"prefix": "q",
+		"body": [
+			"@include query($$break) {",
+			" $0",
+			"}"
+		],
+		"description": "sass snippet for media query"
+	}
+}
