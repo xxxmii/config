@@ -1,0 +1,55 @@
+{
+    "workbench.colorTheme": "Material Light",
+    "workbench.preferredDarkColorTheme": "Default Light+",
+    "breadcrumbs.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.suggestSelection": "first",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": true,
+    "emmet.includeLanguages": {
+        "vue": "html"
+    },
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "git.autofetch": true,
+    "window.zoomLevel": -1,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/Users/xxxmi/.vimrc",
+    "vim.surround": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<Enter>"
+            ],
+            "commands": [
+                "editor.action.insertLineAfter"
+            ]
+        },
+    ],
+    "vim.hlsearch": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+    ],
+}
