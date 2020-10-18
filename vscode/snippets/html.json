@@ -1,12 +1,86 @@
 {
-    "Inner": {
-        "prefix": "in",
+    "header": {
+        "prefix": "header",
         "body": [
-            "<section id=\"$1\">",
-            "<div class=\"inner\">",
-            "$2",
-            "</div><!-- .inner -->",
-            "</section>"
+            "<header class=\"header\">",
+            "<div class=\"header__inner\">",
+            "<div class=\"header\">",
+            "<a class=\"header__logo\" href=\"#\"><img src=\"$1\"alt=\"$2\">$3</a>",
+            "<a class=\"header__btn btn\" href=\"#\">$4</a>",
+            "</div>",
+            "<nav>",
+            "<ul class=\"header-nav\">",
+            "<li class=\"header-nav__item\">",
+            "<a class=\"header-nav__link\" href=\"#\">$5</a>",
+            "</li>",
+            "</ul>",
+            "</nav>",
+            "</div>",
+            "</header>",
         ],
+    },
+    "section": {
+        "prefix": "section",
+        "body": [
+            "<section id=\"$1\" class=\"$2\">",
+            "<div class=\"inner\">",
+            "<h2 class=\"$3__heading\">$4</h2>",
+            "$5",
+            "</div>",
+            "</section>"
+        ]
+    },
+    "a": {
+        "prefix": "a:tab",
+        "description": "別タブ表示",
+        "body": [
+            "<a href=\"$1\" target=\"_blank\" rel=\"noopener noreferrer\"></a>",
+        ]
+    },
+    "img": {
+        "prefix": "img",
+        "body": [
+            "<img src=\"$1\" width=\"$2\" height=\"$3\" alt=\"$4\">",
+        ]
+    },
+    "img_decoding:async": {
+        // ファーストビューにおける画像の量が多い or ページ全体がファーストビューに収まるようなサイト
+        "prefix": "img:a",
+        "body": [
+            "<img src=\"$1\" width=\"$2\" height=\"$3\" decoding=\"async\" alt=\"$4\">",
+        ]
+    },
+    "img_loading:lazy": {
+        // LPのように縦に長くてスクロールで表示される画像が多いサイト
+        "prefix": "img:l",
+        "description": "loading:lazy",
+        "body": [
+            "<img src=\"$1\" width=\"$2\" height=\"$3\" loading=\"lazy\" alt=\"\"$4>",
+        ]
+    },
+    // WordPress用
+    "php": {
+        "prefix": "php",
+        "body": [
+            "<?php $1 ?>",
+        ]
+    },
+    "phpif": {
+        "prefix": "phpif",
+        "body": [
+            "<?php if ($1): ?>",
+            "$2",
+            "<?php else: ?>",
+            "$3",
+            "<?php endif; ?>",
+        ]
+    },
+    "phpwhile": {
+        "prefix": "phpwhile",
+        "body": [
+            "<?php while ($1) : ?>",
+            "  $2",
+            "<?php endwhile; ?>",
+        ]
     },
 }
